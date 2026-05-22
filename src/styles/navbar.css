@@ -11,7 +11,6 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-
 padding:20px 5%;
 
 display:flex;
@@ -21,7 +20,6 @@ align-items:center;
 z-index:9999;
 
 background:rgba(0,0,0,.18);
-
 backdrop-filter:blur(18px);
 
 border-bottom:1px solid rgba(255,255,255,.05);
@@ -52,7 +50,6 @@ font-size:24px;
 cursor:pointer;
 
 transition:.4s;
-
 flex-shrink:0;
 }
 
@@ -75,9 +72,8 @@ gap:40px;
 .nav-links{
 display:flex;
 align-items:center;
-gap:28px;
-
 list-style:none;
+gap:28px;
 }
 
 .nav-links li{
@@ -94,15 +90,12 @@ font-weight:600;
 letter-spacing:2px;
 
 transition:.4s;
-
 white-space:nowrap;
 }
 
 .nav-links li a::after{
 content:"";
-
 position:absolute;
-
 left:0;
 bottom:-8px;
 
@@ -135,25 +128,18 @@ text-decoration:none;
 
 .logo h1{
 font-size:34px;
-
 font-weight:300;
-
 letter-spacing:2px;
-
 line-height:1;
-
 color:white;
-
 transition:.4s;
 }
 
 .logo span{
 display:block;
-
 margin-top:5px;
 
 font-size:10px;
-
 letter-spacing:4px;
 
 color:#d4af37;
@@ -213,6 +199,67 @@ transform:translateY(-4px);
 border-color:black;
 }
 
+/* ================= MOBILE MENU ================= */
+
+.mobile-menu{
+position:fixed;
+
+top:0;
+left:-100%;
+
+width:280px;
+height:100vh;
+
+background:#050505;
+
+padding:100px 30px;
+
+transition:.5s;
+
+z-index:999999;
+
+border-right:1px solid rgba(212,175,55,.2);
+}
+
+.mobile-menu.active{
+left:0;
+}
+
+.mobile-menu ul{
+list-style:none;
+}
+
+.mobile-menu li{
+margin:25px 0;
+}
+
+.mobile-menu a{
+color:white;
+text-decoration:none;
+font-size:15px;
+font-weight:500;
+letter-spacing:2px;
+transition:.4s;
+}
+
+.mobile-menu a:hover{
+color:#d4af37;
+padding-left:10px;
+}
+
+.close-mobile{
+position:absolute;
+
+top:25px;
+right:25px;
+
+font-size:30px;
+
+color:#d4af37;
+
+cursor:pointer;
+}
+
 /* ================= POPUP ================= */
 
 .consult-overlay{
@@ -255,6 +302,7 @@ box-shadow:0 0 40px rgba(212,175,55,.15);
 font-size:30px;
 margin-bottom:15px;
 font-weight:300;
+color:white;
 }
 
 .consult-box p{
@@ -269,16 +317,14 @@ align-items:center;
 justify-content:center;
 gap:15px;
 
-padding:18px;
-
 margin-bottom:18px;
+padding:18px;
 
 border-radius:50px;
 
 border:1px solid #d4af37;
 
 text-decoration:none;
-
 color:#d4af37;
 
 transition:.4s;
@@ -292,7 +338,6 @@ transform:translateY(-4px);
 
 .close-btn{
 margin-top:20px;
-
 padding:14px 30px;
 
 border-radius:50px;
@@ -355,10 +400,6 @@ font-size:28px;
 display:none;
 }
 
-.menu-btn{
-display:flex;
-}
-
 .navbar{
 padding:18px 5%;
 }
@@ -375,13 +416,13 @@ font-size:26px;
 
 .navbar{
 padding:15px 20px;
-position:fixed;
-justify-content:space-between;
 }
 
 .logo{
 position:absolute;
+
 left:50%;
+
 transform:translateX(-50%);
 }
 
@@ -398,7 +439,6 @@ letter-spacing:3px;
 width:42px;
 height:42px;
 font-size:20px;
-z-index:99999;
 }
 
 .consult-box{
@@ -433,6 +473,10 @@ font-size:18px;
 
 .close-btn{
 width:100%;
+}
+
+.mobile-menu{
+width:240px;
 }
 
 }
