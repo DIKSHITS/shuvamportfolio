@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import "../styles/navbar.css";
 
 import {HiOutlineMenuAlt3} from "react-icons/hi";
+import {AiOutlineClose} from "react-icons/ai";
 
 import {
 FaWhatsapp,
@@ -12,7 +13,8 @@ import {Link} from "react-router-dom";
 
 const Navbar=()=>{
 
-const [showPopup,setShowPopup]=useState(false)
+const [showPopup,setShowPopup]=useState(false);
+const [mobileMenu,setMobileMenu]=useState(false);
 
 return(
 
@@ -20,11 +22,20 @@ return(
 
 <nav className="navbar">
 
-<div className="menu-btn">
+{/* MENU BUTTON */}
+
+<div
+className="menu-btn"
+onClick={()=>setMobileMenu(true)}
+>
+
 <HiOutlineMenuAlt3/>
+
 </div>
 
 <div className="nav-center">
+
+{/* LEFT LINKS */}
 
 <ul className="nav-links left">
 
@@ -36,6 +47,8 @@ return(
 
 </ul>
 
+
+{/* LOGO */}
 
 <div className="logo">
 
@@ -52,6 +65,9 @@ className="logo-link"
 
 </div>
 
+
+{/* RIGHT LINKS */}
+
 <ul className="nav-links right">
 
 <li><Link to="/portfolio">PORTFOLIO</Link></li>
@@ -65,6 +81,9 @@ className="logo-link"
 </ul>
 
 </div>
+
+
+{/* CONSULT BUTTON */}
 
 <button
 className="book-btn"
@@ -80,7 +99,90 @@ BOOK CONSULTATION
 </nav>
 
 
-{/* POPUP */}
+{/* MOBILE MENU */}
+
+<div className={`mobile-menu ${mobileMenu ? "active" : ""}`}>
+
+<div
+className="close-mobile"
+onClick={()=>setMobileMenu(false)}
+>
+
+<AiOutlineClose/>
+
+</div>
+
+<ul>
+
+<li>
+<Link
+to="/"
+onClick={()=>setMobileMenu(false)}
+>
+HOME
+</Link>
+</li>
+
+<li>
+<Link
+to="/about"
+onClick={()=>setMobileMenu(false)}
+>
+ABOUT
+</Link>
+</li>
+
+<li>
+<Link
+to="/our-craft"
+onClick={()=>setMobileMenu(false)}
+>
+OUR CRAFT
+</Link>
+</li>
+
+<li>
+<Link
+to="/portfolio"
+onClick={()=>setMobileMenu(false)}
+>
+PORTFOLIO
+</Link>
+</li>
+
+<li>
+<Link
+to="/experiences"
+onClick={()=>setMobileMenu(false)}
+>
+EXPERIENCES
+</Link>
+</li>
+
+<li>
+<Link
+to="/stories"
+onClick={()=>setMobileMenu(false)}
+>
+STORIES
+</Link>
+</li>
+
+<li>
+<Link
+to="/contact"
+onClick={()=>setMobileMenu(false)}
+>
+CONTACT
+</Link>
+</li>
+
+</ul>
+
+</div>
+
+
+{/* CONSULTATION POPUP */}
 
 {
 showPopup && (
