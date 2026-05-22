@@ -1,0 +1,225 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.philosophy{
+width:100%;
+min-height:100vh;
+
+display:grid;
+grid-template-columns:1.2fr 1fr;
+
+background:#050505;
+
+overflow:hidden;
+perspective:1500px;
+
+position:relative;
+}
+
+/* IMAGE */
+
+.philosophy-image{
+overflow:hidden;
+transform-style:preserve-3d;
+position:relative;
+}
+
+.philosophy-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+
+filter:grayscale(100%);
+transition:1s;
+}
+
+.philosophy-image:hover img{
+transform:scale(1.1);
+filter:grayscale(0%);
+}
+
+/* RIGHT SIDE */
+
+.philosophy-content{
+padding:100px 70px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+background:linear-gradient(
+to right,
+#050505,
+#0c0c0c
+);
+
+color:white;
+transform-style:preserve-3d;
+position:relative;
+z-index:2;
+}
+
+.small-title{
+color:#d4af37;
+font-size:12px;
+letter-spacing:4px;
+margin-bottom:20px;
+}
+
+.philosophy-content h1{
+font-size:clamp(2rem,5vw,4.5rem);
+font-weight:300;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.philosophy-content h1 span{
+color:#d4af37;
+font-style:italic;
+}
+
+.gold-line{
+width:60px;
+height:2px;
+background:#d4af37;
+margin-bottom:30px;
+}
+
+.philosophy-content p{
+line-height:2;
+color:#ccc;
+margin-bottom:20px;
+font-size:15px;
+}
+
+.philosophy button{
+width:220px;
+padding:18px;
+
+background:transparent;
+
+border:1px solid #d4af37;
+
+color:#d4af37;
+
+cursor:pointer;
+
+transition:.5s;
+
+font-size:15px;
+border-radius:6px;
+}
+
+.philosophy button:hover{
+background:#d4af37;
+color:black;
+transform:translateY(-4px);
+}
+
+/* PARTICLES */
+
+.particles{
+position:absolute;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+/* ================= LARGE TABLET ================= */
+
+@media(max-width:1100px){
+
+.philosophy-content{
+padding:70px 50px;
+}
+
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:900px){
+
+.philosophy{
+grid-template-columns:1fr;
+min-height:auto;
+}
+
+.philosophy-image{
+height:500px;
+}
+
+.philosophy-content{
+padding:60px 35px;
+text-align:center;
+align-items:center;
+}
+
+.gold-line{
+margin:0 auto 30px;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.philosophy-image{
+height:380px;
+}
+
+.philosophy-content{
+padding:50px 25px;
+}
+
+.small-title{
+font-size:10px;
+letter-spacing:3px;
+}
+
+.philosophy-content h1{
+font-size:36px;
+}
+
+.philosophy-content p{
+font-size:14px;
+line-height:1.8;
+}
+
+.philosophy button{
+width:100%;
+max-width:260px;
+}
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:480px){
+
+.philosophy-image{
+height:260px;
+}
+
+.philosophy-content{
+padding:40px 20px;
+}
+
+.philosophy-content h1{
+font-size:28px;
+}
+
+.philosophy-content p{
+font-size:13px;
+}
+
+.philosophy button{
+padding:15px;
+font-size:14px;
+}
+
+}

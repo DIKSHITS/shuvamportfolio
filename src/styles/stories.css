@@ -1,0 +1,370 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.stories{
+min-height:100vh;
+
+background:
+radial-gradient(
+circle at top,
+rgba(212,175,55,.08),
+transparent 30%
+),
+linear-gradient(
+to bottom,
+#000,
+#050505
+);
+
+padding:120px 5%;
+color:white;
+overflow:hidden;
+}
+
+/* TOP */
+
+.story-top{
+text-align:center;
+margin-bottom:60px;
+animation:fadeUp 1.2s ease;
+}
+
+.story-top p{
+color:#d4af37;
+font-size:12px;
+letter-spacing:6px;
+}
+
+.line{
+width:80px;
+height:2px;
+background:#d4af37;
+margin:22px auto;
+}
+
+.story-top h1{
+font-size:clamp(2.5rem,7vw,100px);
+font-weight:300;
+line-height:1.1;
+margin-bottom:25px;
+}
+
+.story-top span{
+display:block;
+font-style:italic;
+color:#d4af37;
+}
+
+.story-top h4{
+font-size:22px;
+font-weight:300;
+line-height:1.8;
+color:#d5d5d5;
+max-width:850px;
+margin:auto;
+}
+
+/* CARD */
+
+.story-card{
+max-width:900px;
+margin:auto;
+position:relative;
+
+border:1px solid rgba(212,175,55,.35);
+
+overflow:hidden;
+
+border-radius:12px;
+
+box-shadow:0 0 30px rgba(212,175,55,.08);
+}
+
+.story-card img{
+width:100%;
+height:900px;
+
+object-fit:cover;
+
+display:block;
+
+transition:
+transform 1.2s ease,
+opacity .8s ease;
+
+animation:imageFade 1s ease;
+}
+
+.story-card:hover img{
+transform:scale(1.05);
+}
+
+/* OVERLAY */
+
+.story-overlay{
+position:absolute;
+bottom:0;
+left:0;
+
+width:100%;
+padding:60px;
+
+text-align:center;
+
+background:linear-gradient(
+transparent,
+rgba(0,0,0,.98)
+);
+
+backdrop-filter:blur(10px);
+}
+
+.category{
+color:#d4af37;
+letter-spacing:5px;
+margin-bottom:20px;
+font-size:12px;
+}
+
+.story-overlay h2{
+font-size:clamp(2rem,5vw,55px);
+font-weight:300;
+margin-bottom:20px;
+}
+
+.smallLine{
+width:70px;
+height:2px;
+background:#d4af37;
+margin:20px auto;
+}
+
+.story-overlay h3{
+color:#d4af37;
+margin-bottom:35px;
+font-size:20px;
+}
+
+/* BUTTONS */
+
+.controls{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.controls button{
+width:65px;
+height:65px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(212,175,55,.6);
+
+color:#d4af37;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.5s;
+}
+
+.controls button:hover{
+background:#d4af37;
+color:black;
+transform:translateY(-5px);
+}
+
+/* DOTS */
+
+.dots{
+display:flex;
+gap:12px;
+align-items:center;
+}
+
+.dots span{
+width:12px;
+height:12px;
+
+border-radius:50%;
+background:#444;
+
+transition:.5s;
+}
+
+.dots .active{
+width:30px;
+border-radius:30px;
+background:#d4af37;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes imageFade{
+from{
+opacity:.3;
+transform:scale(1.1);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+/* ================= LARGE TABLET ================= */
+
+@media(max-width:1100px){
+
+.story-card img{
+height:700px;
+}
+
+.story-overlay{
+padding:45px;
+}
+
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:992px){
+
+.stories{
+padding:90px 5%;
+}
+
+.story-top h4{
+font-size:18px;
+}
+
+.story-card img{
+height:600px;
+}
+
+.story-overlay h2{
+font-size:40px;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.stories{
+padding:70px 20px;
+}
+
+.story-top{
+margin-bottom:40px;
+}
+
+.story-top p{
+font-size:10px;
+letter-spacing:4px;
+}
+
+.story-top h1{
+font-size:40px;
+}
+
+.story-top h4{
+font-size:15px;
+line-height:1.7;
+}
+
+.story-card img{
+height:450px;
+}
+
+.story-overlay{
+padding:25px;
+}
+
+.story-overlay h2{
+font-size:28px;
+}
+
+.story-overlay h3{
+font-size:16px;
+margin-bottom:20px;
+}
+
+.controls{
+gap:15px;
+}
+
+.controls button{
+width:50px;
+height:50px;
+font-size:16px;
+}
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:480px){
+
+.stories{
+padding:60px 15px;
+}
+
+.story-top h1{
+font-size:30px;
+}
+
+.story-card img{
+height:320px;
+}
+
+.story-overlay{
+padding:18px;
+}
+
+.story-overlay h2{
+font-size:22px;
+}
+
+.story-overlay h3{
+font-size:14px;
+}
+
+.controls button{
+width:42px;
+height:42px;
+font-size:14px;
+}
+
+.dots span{
+width:8px;
+height:8px;
+}
+
+.dots .active{
+width:22px;
+}
+
+}

@@ -1,0 +1,287 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.exp{
+padding:120px 5%;
+background:#050505;
+color:white;
+min-height:100vh;
+overflow:hidden;
+}
+
+/* HEADER */
+
+.exp-header{
+text-align:center;
+margin-bottom:60px;
+}
+
+.exp-header p{
+color:#d4af37;
+letter-spacing:5px;
+font-size:12px;
+}
+
+.gold-line{
+width:80px;
+height:2px;
+background:#d4af37;
+margin:20px auto;
+}
+
+.exp-header h1{
+font-size:clamp(2.5rem,8vw,90px);
+font-weight:300;
+margin-bottom:20px;
+line-height:1.1;
+}
+
+.exp-header span{
+color:#d4af37;
+font-style:italic;
+}
+
+.exp-header h4{
+color:#c5c5c5;
+font-weight:300;
+line-height:2;
+max-width:800px;
+margin:auto;
+}
+
+/* GRID */
+
+.experience-grid{
+display:grid;
+grid-template-columns:1.2fr 1fr 1fr;
+grid-template-rows:370px 320px;
+gap:15px;
+}
+
+.wedding{
+grid-row:1/3;
+}
+
+/* BOX */
+
+.box{
+position:relative;
+overflow:hidden;
+border:1px solid rgba(212,175,55,.5);
+cursor:pointer;
+border-radius:10px;
+}
+
+.box img,
+.box video{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:1s;
+display:block;
+}
+
+.box:hover img,
+.box:hover video{
+transform:scale(1.08);
+}
+
+/* CONTENT */
+
+.content{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:35px;
+background:linear-gradient(
+transparent,
+rgba(0,0,0,.95)
+);
+}
+
+.content h5{
+color:#d4af37;
+font-size:26px;
+}
+
+.small-line{
+width:60px;
+height:2px;
+background:#d4af37;
+margin:10px 0;
+}
+
+.content h2{
+font-size:clamp(1.5rem,4vw,42px);
+font-weight:300;
+margin-bottom:10px;
+}
+
+.content p{
+line-height:1.7;
+color:#ddd;
+font-size:15px;
+}
+
+/* PLAY BUTTON */
+
+.play{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:90px;
+height:90px;
+border-radius:50%;
+border:2px solid white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+z-index:5;
+backdrop-filter:blur(10px);
+}
+
+/* ================= LARGE TABLET ================= */
+
+@media(max-width:1100px){
+
+.exp{
+padding:90px 6%;
+}
+
+.experience-grid{
+grid-template-columns:repeat(2,1fr);
+grid-template-rows:350px 300px;
+}
+
+.wedding{
+grid-row:auto;
+grid-column:span 2;
+height:400px;
+}
+
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:991px){
+
+.experience-grid{
+grid-template-columns:1fr;
+grid-template-rows:auto;
+}
+
+.wedding{
+grid-column:auto;
+height:450px;
+}
+
+.box{
+height:350px;
+}
+
+.exp-header h1{
+font-size:50px;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.exp{
+padding:70px 5%;
+}
+
+.exp-header{
+margin-bottom:40px;
+}
+
+.exp-header p{
+font-size:10px;
+letter-spacing:4px;
+}
+
+.exp-header h1{
+font-size:38px;
+}
+
+.exp-header h4{
+font-size:15px;
+line-height:1.8;
+}
+
+.box{
+height:300px;
+}
+
+.content{
+padding:25px;
+}
+
+.content h5{
+font-size:22px;
+}
+
+.content h2{
+font-size:28px;
+}
+
+.play{
+width:70px;
+height:70px;
+font-size:24px;
+}
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:480px){
+
+.exp{
+padding:60px 20px;
+}
+
+.exp-header h1{
+font-size:30px;
+}
+
+.exp-header h4{
+font-size:14px;
+}
+
+.box{
+height:250px;
+}
+
+.content{
+padding:18px;
+}
+
+.content h5{
+font-size:18px;
+}
+
+.content h2{
+font-size:22px;
+}
+
+.content p{
+font-size:13px;
+line-height:1.6;
+}
+
+.play{
+width:55px;
+height:55px;
+font-size:18px;
+}
+
+}

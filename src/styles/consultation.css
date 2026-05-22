@@ -1,0 +1,218 @@
+/* OVERLAY */
+
+.consultation-overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.6);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+z-index:2000;
+overflow-y:auto;
+}
+
+/* MODAL */
+
+.consultation-modal{
+background:#fff;
+color:#000;
+padding:25px;
+border-radius:12px;
+width:380px;
+max-width:100%;
+position:relative;
+text-align:left;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.consultation-close{
+position:absolute;
+right:15px;
+top:10px;
+background:none;
+border:none;
+font-size:24px;
+cursor:pointer;
+}
+
+/* FORM */
+
+.consultation-form input,
+.consultation-form textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:15px;
+outline:none;
+}
+
+.consultation-form input:focus,
+.consultation-form textarea:focus{
+border-color:#d4af37;
+}
+
+.consultation-form textarea{
+min-height:90px;
+resize:none;
+}
+
+.consultation-form .row{
+display:flex;
+gap:10px;
+}
+
+.consultation-form .row input{
+flex:1;
+}
+
+/* BUTTONS */
+
+.consultation-options{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:18px;
+}
+
+.consultation-options button{
+padding:14px;
+border-radius:8px;
+border:none;
+cursor:pointer;
+font-weight:600;
+font-size:15px;
+transition:.3s;
+}
+
+.consultation-google{
+background:#4285f4;
+color:#fff;
+}
+
+.consultation-whatsapp{
+background:#25D366;
+color:#fff;
+}
+
+.consultation-options button:hover{
+transform:translateY(-2px);
+}
+
+/* INLINE POPUP */
+
+.consultation-inline{
+position:absolute;
+right:18px;
+top:calc(100% + 10px);
+
+width:360px;
+max-width:95vw;
+
+background:#fff;
+
+box-shadow:0 8px 24px rgba(0,0,0,.15);
+
+border-radius:10px;
+
+padding:15px;
+
+z-index:1500;
+}
+
+.consultation-inline .inline-row{
+display:flex;
+gap:8px;
+}
+
+.consultation-inline input,
+.consultation-inline textarea{
+width:100%;
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+font-size:14px;
+}
+
+.consultation-inline textarea{
+margin-top:8px;
+min-height:80px;
+resize:none;
+}
+
+.consultation-inline .inline-actions{
+display:flex;
+gap:8px;
+margin-top:12px;
+}
+
+.consultation-inline .inline-actions button{
+flex:1;
+padding:10px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:768px){
+
+.consultation-modal{
+width:100%;
+padding:20px;
+}
+
+.consultation-inline{
+position:relative;
+right:auto;
+top:auto;
+width:100%;
+margin-top:15px;
+}
+
+.consultation-inline .inline-row{
+flex-direction:column;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:480px){
+
+.consultation-overlay{
+padding:15px;
+}
+
+.consultation-modal{
+padding:18px;
+border-radius:10px;
+}
+
+.consultation-form .row{
+flex-direction:column;
+gap:0;
+}
+
+.consultation-options button{
+width:100%;
+font-size:14px;
+padding:12px;
+}
+
+.consultation-close{
+font-size:20px;
+}
+
+.consultation-inline{
+padding:12px;
+}
+
+.consultation-inline .inline-actions{
+flex-direction:column;
+}
+
+}

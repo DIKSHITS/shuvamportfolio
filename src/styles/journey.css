@@ -1,0 +1,206 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.journey{
+width:100%;
+padding:80px 6%;
+background:#050505;
+border-top:1px solid rgba(212,175,55,.3);
+border-bottom:1px solid rgba(212,175,55,.3);
+position:relative;
+overflow:hidden;
+text-align:center;
+}
+
+/* TITLE */
+
+.journey h5{
+color:#b38a35;
+letter-spacing:4px;
+font-size:11px;
+margin-bottom:50px;
+font-weight:500;
+}
+
+/* WRAPPER */
+
+.journey-wrapper{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:35px;
+flex-wrap:wrap;
+}
+
+/* ITEMS */
+
+.item{
+color:white;
+width:180px;
+transition:.6s;
+padding:15px;
+}
+
+.item:hover{
+transform:translateY(-12px) scale(1.05);
+}
+
+.item svg{
+font-size:34px;
+color:#d4af37;
+margin-bottom:15px;
+transition:.6s;
+}
+
+.item:hover svg{
+transform:rotateY(360deg);
+}
+
+.item h1{
+font-size:clamp(2rem,5vw,48px);
+font-weight:300;
+margin-bottom:10px;
+}
+
+.item p{
+font-size:14px;
+line-height:1.8;
+color:#d0d0d0;
+}
+
+/* DIVIDER */
+
+.divider{
+width:1px;
+height:120px;
+background:rgba(212,175,55,.3);
+flex-shrink:0;
+}
+
+/* FLOWERS */
+
+.flower{
+position:absolute;
+font-size:140px;
+opacity:.15;
+color:#d4af37;
+pointer-events:none;
+}
+
+.left-flower{
+left:40px;
+top:50%;
+transform:translateY(-50%);
+}
+
+.right-flower{
+right:40px;
+top:50%;
+transform:translateY(-50%);
+}
+
+/* ================= LARGE TABLET ================= */
+
+@media(max-width:1100px){
+
+.journey{
+padding:70px 5%;
+}
+
+.item{
+width:160px;
+}
+
+.flower{
+font-size:100px;
+}
+
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:900px){
+
+.journey-wrapper{
+flex-direction:column;
+gap:25px;
+}
+
+.divider{
+width:120px;
+height:1px;
+}
+
+.flower{
+display:none;
+}
+
+.item{
+width:100%;
+max-width:300px;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.journey{
+padding:60px 5%;
+}
+
+.journey h5{
+font-size:10px;
+letter-spacing:3px;
+margin-bottom:35px;
+}
+
+.item h1{
+font-size:36px;
+}
+
+.item p{
+font-size:13px;
+line-height:1.7;
+}
+
+.item svg{
+font-size:28px;
+}
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:480px){
+
+.journey{
+padding:50px 20px;
+}
+
+.item{
+padding:10px;
+}
+
+.item h1{
+font-size:28px;
+}
+
+.item p{
+font-size:12px;
+}
+
+.item svg{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.divider{
+width:80px;
+}
+
+}
